@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="08f3362f-5a87-47ce-bcd5-a01f06f45be8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/hien-thi-gia-vi-voi-sanwitch/hien-thi-gia-vi-voi-sandwitch.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/hien-thi-gia-vi-voi-sanwitch/src/main/java/controllers/SandwichController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/hien-thi-gia-vi-voi-sanwitch/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/hien-thi-gia-vi-voi-sanwitch/src/main/webapp/WEB-INF/views/result.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/hien-thi-gia-vi-voi-sanwitch/src/main/webapp/WEB-INF/views/sandwich.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/may-tinh-ca-nhan/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/may-tinh-ca-nhan/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/may-tinh-ca-nhan/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/may-tinh-ca-nhan/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/may-tinh-ca-nhan/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/may-tinh-ca-nhan/may-tinh-ca-nhan.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/may-tinh-ca-nhan/src/main/java/controllers/CalculatorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/may-tinh-ca-nhan/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai-tap/may-tinh-ca-nhan/src/main/webapp/WEB-INF/views/calculator.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/spring-controller-student/spring-controller-student/spring-controller-student.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc-hanh/kiem-tra-email-hop-le/kiem-tra-email-hop-le.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc-hanh/kiem-tra-email-hop-le/src/main/java/controllers/EmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc-hanh/kiem-tra-email-hop-le/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc-hanh/kiem-tra-email-hop-le/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc-hanh/kiem-tra-email-hop-le/src/main/webapp/WEB-INF/views/success.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc-hanh/xem-gio-hien-tai-cua-cac-thanh-pho-tren-the-gioi/src/main/java/controllers/TimeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc-hanh/xem-gio-hien-tai-cua-cac-thanh-pho-tren-the-gioi/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc-hanh/xem-gio-hien-tai-cua-cac-thanh-pho-tren-the-gioi/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc-hanh/xem-gio-hien-tai-cua-cac-thanh-pho-tren-the-gioi/xem-gio-hien-tai-cua-cac-thanh-pho-tren-the-gioi.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai3-DataBinding/C04/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai3-DataBinding/C04/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai3-DataBinding/C04/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai3-DataBinding/C04/C04.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai3-DataBinding/lam-lai-demo-spring-databiding-student/spring-controller-student.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai3-DataBinding/lam-lai-demo-spring-databiding-student/src/main/java/model/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai3-DataBinding/lam-lai-demo-spring-databiding-student/src/main/webapp/WEB-INF/views/addStudent.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Bai3-DataBinding/lam-lai-demo-spring-databiding-student/src/main/webapp/WEB-INF/views/editStudent.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/6.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/build/classes/java/main/controllers/SandwichController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/build/libs/hien_thi_gia_vi_voi_sandwich-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/src/main/java/controllers/SandwichController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/src/main/webapp/WEB-INF/views/finish.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/src/main/webapp/WEB-INF/views/sandwich.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/hien_thi_gia_vi_voi_sandwich/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/6.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/build/classes/java/main/controllers/CalculatorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/build/libs/may_tinh_ca_nhan-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/src/main/java/controllers/CalculatorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/src/main/webapp/WEB-INF/views/calculator.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/bai_tap/may_tinh_ca_nhan/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/6.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.idea/modules/Spring-email-validation.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/build/classes/java/main/controllers/EmailController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/build/libs/Spring-email-validation-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/src/main/java/controllers/EmailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/src/main/webapp/WEB-INF/views/success.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/Spring-email-validation/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/6.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/build/classes/java/main/controllers/TimeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/build/libs/spring-timezone-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/src/main/java/controllers/TimeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Bai2-SpringController/thuc_hanh/spring-timezone/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../configSpring-MrHai/dependency.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../configSpring-MrHai/dependency.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1gSCLEWNnypUYAOp1naHEkXZhv4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08f3362f-5a87-47ce-bcd5-a01f06f45be8" name="Default Changelist" comment="" />
+      <created>1598098548653</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598098548653</updated>
+      <workItem from="1598098550267" duration="1574000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="579" y="184" key="FileChooserDialogImpl" timestamp="1598100093933">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="579" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1598100093933" />
+    <state x="182" y="90" key="new project wizard" timestamp="1598100124818">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="182" y="90" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1598100124818" />
+  </component>
+</project>
