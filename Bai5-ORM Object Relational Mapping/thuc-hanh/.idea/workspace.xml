@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bebbfa22-be36-4d9a-a281-7dff1b810be1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/java/com/codegym/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/java/com/codegym/repository/ProductRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/java/com/codegym/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/java/com/codegym/service/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/bai-tap/product-manager-thymeleaf/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/java/com/codegym/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/java/com/codegym/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai4-Thymeleaf/thuc-hanh/customer-management/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Buc_anh_cua_ngay/.idea/Buc_anh_cua_ngay.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/src/main/java/com/codegym/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/src/main/java/com/codegym/ApplicationInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/src/main/java/com/codegym/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/src/main/java/com/codegym/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/src/main/java/com/codegym/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/src/main/java/com/codegym/repository/impl/CommentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/src/main/java/com/codegym/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/src/main/java/com/codegym/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/src/main/webapp/WEB-INF/views/create-comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/src/main/webapp/WEB-INF/views/image.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai-tap/image-of-the-day/src/main/webapp/WEB-INF/views/list-comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/thuc-hanh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/java/com/example/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/java/com/example/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/java/com/example/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/java/com/example/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/java/com/example/service/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/java/com/example/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/java/com/example/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-manager/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/java/levunguyen/com/customermanagerspringboot/CustomerManagerSpringBootApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/java/levunguyen/com/customermanagerspringboot/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/java/levunguyen/com/customermanagerspringboot/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/java/levunguyen/com/customermanagerspringboot/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/java/levunguyen/com/customermanagerspringboot/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/java/levunguyen/com/customermanagerspringboot/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/resources/templates/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/main/resources/templates/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Bai6-SpringBoot-JPA/thuc-hanh/customer-manager-springboot/src/test/java/levunguyen/com/customermanagerspringboot/CustomerManagerSpringBootApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../config-ORM-MrHai/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../config-ORM-MrHai/ApplicationInitializer.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1gWmF7AXeAZZgvLZsdnksO7m77w" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CODEGYM\C0420G1-VuLeTuong-Module4\Bai5-ORM Object Relational Mapping\thuc-hanh\customer-management\src\main\webapp\WEB-INF" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bebbfa22-be36-4d9a-a281-7dff1b810be1" name="Default Changelist" comment="" />
+      <created>1598238615265</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598238615265</updated>
+      <workItem from="1598238620634" duration="840000" />
+      <workItem from="1598239526640" duration="370000" />
+      <workItem from="1598344270983" duration="1779000" />
+      <workItem from="1598436823016" duration="30000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="397" y="144" key="FileChooserDialogImpl" timestamp="1598344705116">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="397" y="144" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1598344705116" />
+    <state x="0" y="0" key="new project wizard" timestamp="1598344744405">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="0" y="0" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1598344744405" />
+  </component>
+</project>
