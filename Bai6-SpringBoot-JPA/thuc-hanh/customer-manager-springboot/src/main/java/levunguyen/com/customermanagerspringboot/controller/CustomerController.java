@@ -25,19 +25,23 @@ public class CustomerController {
     }
     @PostMapping("/customer/save")
     public String save(Customer customer, RedirectAttributes redirect){
-//        customer.setId((Long) (Math.random()*1000));
         customerService.save(customer);
         redirect.addFlashAttribute("success","Saved customer successfully");
         return "redirect:/";
     }
     @GetMapping("/customer/{id}/edit")
     public ModelAndView edit(@PathVariable Long id){
-        return new ModelAndView("edit","customer",customerService.findById(id));
+        Customer customer = customerService.findById(id);
+        if (customer!=null){
+            return new ModelAndView("edit","customer",customer);
+        }else {
+            return new ModelAndView("error.404");
+        }
+
     }
 
     @PostMapping("/customer/update")
     public String update(Customer customer, RedirectAttributes redirect){
-//        customerService.update(customer.getId(),customer);
         customerService.save(customer);
         redirect.addFlashAttribute("success","updated customer successfully");
         return "redirect:/";
@@ -45,7 +49,12 @@ public class CustomerController {
 
     @GetMapping("/customer/{id}/delete")
     public ModelAndView delete(@PathVariable Long id){
-        return new ModelAndView("delete","customer",customerService.findById(id));
+        Customer customer = customerService.findById(id);
+        if(customer!=null){
+            return new ModelAndView("delete","customer",customer);
+        }else {
+            return new ModelAndView("error.404");
+        }
     }
     @PostMapping("/customer/delete")
     public String delete(Customer customer, RedirectAttributes redirect){

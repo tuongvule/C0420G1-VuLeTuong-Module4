@@ -34,7 +34,13 @@ public class BlogController {
     }
     @GetMapping("/blog/{id}/edit")
     public ModelAndView edit(@PathVariable("id") Long id){
-        return new ModelAndView("edit","blog",blogService.findById(id));
+        Blog blog = blogService.findById(id);
+        if(blog!=null){
+            return new ModelAndView("edit","blog",blog);
+        }else {
+            return new ModelAndView("error.404");
+        }
+
     }
     @PostMapping("/blog/update")
     public String update(Blog blog, RedirectAttributes redirectAttributes){
@@ -44,7 +50,13 @@ public class BlogController {
     }
     @GetMapping("/blog/{id}/delete")
     public ModelAndView delete(@PathVariable("id") Long id){
-        return new ModelAndView("delete","blog",blogService.findById(id));
+        Blog blog = blogService.findById(id);
+        if(blog!=null){
+            return new ModelAndView("delete","blog",blog);
+        }else {
+            return new ModelAndView("error.404");
+        }
+
     }
     @PostMapping("/blog/delete")
     public String delete(Blog blog,RedirectAttributes redirectAttributes){

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="customer/layout::head" head>
+<body>
+<h3> Customer Information</h3>
+<p><a th:href="@{/}">Back to Customer List</a></p>
+<div id="detail">
+    <div class="cusdetail">
+        <label>Name:</label>
+        <label th:text="${customer.getName()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Age:</label>
+        <label th:text="${customer.age}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Province:</label>
+        <label th:text="${customer.province.name}"></label>
+    </div>
+</div>
+<footer th:replace="customer/layout::footer" footer></footer>
+</body>
+</html>
