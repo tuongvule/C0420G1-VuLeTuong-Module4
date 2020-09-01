@@ -4,10 +4,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 public class User implements Validator {
     @NotEmpty(message = "first name can not be left empty")
@@ -18,12 +15,14 @@ public class User implements Validator {
     @Size(min=5, max = 45, message = "last name must be between 5 and 45 characters")
     private String lastName;
 
-
+    @NotEmpty(message = "phone number can not be empty")
     private String phoneNumber;
 
+    @NotNull(message = "age can be left null")
     @Min(value = 18, message = "age must be over 18")
     private int age;
 
+    @NotEmpty(message = "email can not be empty")
     @Email(message = "email must be in the format abc@abc.com")
     private String email;
 
