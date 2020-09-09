@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head" head>
+    <head>
+        <meta charset="UTF-8">
+        <title>View</title>
+    </head>
+<body>
+
+<div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form th:action="@{/blog/view}" method="post" th:object=" ${blog}">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Blog Infomation</h4>
+                    <a th:href="@{/}"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></a>
+                </div>
+                <div class="modal-body">
+
+                    <table>
+                        <input type="hidden" th:field="*{id}">
+                        <tr>
+                            <td>Title :</td>
+                            <td  th:text="*{title}"></td>
+                        </tr>
+                        <tr>
+                            <td>Content :</td>
+                            <td  th:text="*{content}"></td  >
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <a th:href="@{/}"><input type="button" class="btn btn-default" data-dismiss="modal" value="Back to Blog List"></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer th:replace="layout::footer" footer></footer>
+</body>
+</html>
