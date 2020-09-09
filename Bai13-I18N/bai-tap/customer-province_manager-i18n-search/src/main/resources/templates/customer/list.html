@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<title th:text="#{list.title}"></title>
+<meta charset="UTF-8">
+<!--<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=SHIFT_JIS">-->
+<!--<META HTTP-EQUIV="Content-language" CONTENT="ja">-->
+<head th:replace="customer/layout::head" head>
+<body>
+<h3 th:text="#{list.heading}"></h3>
+<p>
+    <a th:href="@{/create-customer}" >
+        <span th:text="#{list.linkCreate_label}"></span>
+    </a>
+</p>
+<div class="notify">
+    <div th:if="${message}">
+        <span th:text="${message}"></span>
+    </div>
+</div>
+<div style="display: flex; list-style: none">
+    <form th:action="@{/search}" method="get">
+        <input style="height: fit-content; width: auto" type="text" name="search" placeholder="search by name" th:value="${search}">
+        <button type="submit" th:text="#{list.searchByName_label}"></button>
+    </form>
+    <form th:action="@{/customers}" method="get">
+        <input style="height: fit-content; width: auto" type="text" name="search" placeholder="seach by contain name" th:value="${search}">
+        <button type="submit" th:text="#{list.searchByNameContain_label}"></button>
+    </form>
+    <form th:action="@{/searchCustomerAllField}" method="get">
+        <input style="height: fit-content; width: auto" type="text" name="name" placeholder="seach by all name" th:value="${name}">
+        <input style="height: fit-content; width: auto" type="text" name="age" placeholder="seach by all age" th:value="${age}">
+        <input style="height: fit-content; width: auto" type="text" name="province" placeholder="seach by province" th:value="${province}">
+        <button type="submit" th:text="#{list.searchByNameField_label}"></button>
+    </form>
+</div>
+Language: <a href="?lang=en">English</a> | <a href="?lang=ja">Japanese</a>
+<table id = "customers">
+    <thead>
+    <tr>
+        <th th:text="#{list.nameLabel}"></th>
+        <th th:text="#{list.ageLabel}"></th>
+        <th th:text="#{list.provinceLabel}"></th>
+        <th th:text="#{list.editLabel}"></th>
+        <th th:text="#{list.deleteLabel}"></th>
+        <th th:text="#{list.viewLabel}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customer,rowStat : ${customers}">
+        <td th:text="${customer.name}"></td>
+        <td th:text="${customer.age}"></td>
+        <td th:text="${customer.province.name}"></td>
+        <td><a th:href="@{/edit-customer/__${customer.id}__ }"><span th:text="#{list.editLink}"></span></a></td>
+        <td><a th:href="@{/delete-customer/__${customer.id}__ }"><span th:text="#{list.deleteLink}"></span></a></td>
+        <td><a th:href="@{/view-customer/__${customer.id}__ }"><span th:text="#{list.viewLink}"></span></a></td>
+    </tr>
+    </tbody>
+</table>
+<div >
+    <ul style="display: flex; list-style: none">
+        <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
+        <a th:href="@{'/customers'(page=${customers.number - 1},search=${search})}" th:if="${customers.hasPrevious()}"><button th:text="#{list.previousLabel}"></button></a>
+        <li th:each="i: ${#numbers.sequence(1, customers.getTotalPages())}" >
+            <a th:href="@{'/customers'(page=${i - 1},search=${search})}"><button>[[${i}]]</button></a>
+        </li>
+        <a th:href="@{'/customers'(page=${customers.number + 1} ,search=${search})}" th:if="${customers.hasNext()}"><button th:text="#{list.nextLabel}"></button></a>
+    </ul>
+</div>
+<form  action="">
+    <input style="height: fit-content; width: auto" type="text">
+    <input style="padding: 5px" type="submit" value="Press">
+</form>
+<footer th:replace="customer/layout::footer" footer></footer>
+</body>
+</html>

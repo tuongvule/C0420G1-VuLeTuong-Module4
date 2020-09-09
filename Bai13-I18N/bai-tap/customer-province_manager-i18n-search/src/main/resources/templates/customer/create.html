@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="customer/layout::head" head>
+<body>
+<h3>Add New Customer</h3>
+<p><a th:href="@{/}">Back to Customer List</a></p>
+<div id="form">
+    <form action="#" th:action="@{/create-customer}" th:object="${customer}" method="post" novalidate>
+        <input type="hidden" th:field="*{id}">
+        <div>
+            <lable>Name</lable>
+            <input type="text" th:field="*{name}">
+        </div>
+        <div>
+            <lable>Age</lable>
+            <input type="text" th:field="*{age}">
+        </div>
+        <div>
+            <lable>Province</lable>
+            <select name="province">
+                <option th:each="p: ${provinces}"
+                        th:value="${p.id}"
+                        th:text="${p.name}"></option>
+            </select>11`
+        </div>
+        <input type="submit" value="Save">
+    </form>
+</div>
+<footer th:replace="customer/layout::footer" footer></footer>
+</body>
+</html>
+<!--th:selected="(${p.id}==*{province.id})"-->
