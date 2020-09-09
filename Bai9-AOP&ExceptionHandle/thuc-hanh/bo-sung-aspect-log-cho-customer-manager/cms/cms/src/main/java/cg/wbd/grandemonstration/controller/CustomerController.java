@@ -44,6 +44,7 @@ public class CustomerController {
 //        modelAndView.addObject("customer", customer);
 //        return modelAndView;
 //    }
+
 @GetMapping("{id}")
 public ModelAndView showInformation(@PathVariable Long id) {
     try {

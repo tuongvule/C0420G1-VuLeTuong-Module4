@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head" head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<div class="content" style="height: 71vh">
+    <div class="container-lg">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2>Book List</h2>
+                        </div>
+                        <div class="col-sm-3">
+                            <a th:href="@{/books/create}" class="btn btn-success" data-toggle="modal-dialog"><i class="fa fa-plus"></i> <span>Add New Book</span></a>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="search-box">
+                                <div class="input-group">
+                                    <input type="text" id="search" class="form-control" placeholder="Search by Name">
+                                    <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notify">
+                    <div th:if="${success}">
+                        <span th:text="${success}"></span>
+                    </div>
+                </div>
+                <table class="table table-striped" >
+                    <thead>
+                    <tr>
+                        <th style="width: 22%;">Name of book</th>
+                        <th style="width: 22%;">Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="book,rowStat : ${books}">
+                        <td th:text="${book.nameBook}"></td>
+                        <td th:text="${book.amount}"></td>
+                        <td>
+                            <a th:href="@{/borrowBook/__${book.id}__}" class="view"  title="Borrow Book" data-toggle="tooltip">Borrow Book</a>
+<!--                            <i class="material-icons">&#xE417;</i>-->
+<!--                            <a th:href="@{/blog/{id}/edit(id=${blog.id})}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
+<!--                            <a th:href="@{/blog/{id}/delete(id=${blog.id})}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>-->
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <form action="/showGiveBookBack" method="get">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary" value="Give Book Back">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="layout::footer" footer></footer>
+</body>
+</html>

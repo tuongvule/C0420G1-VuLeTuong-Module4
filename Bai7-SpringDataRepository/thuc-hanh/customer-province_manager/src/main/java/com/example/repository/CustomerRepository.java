@@ -12,5 +12,6 @@ import java.util.List;
 public interface CustomerRepository extends JpaRepository<Customer,Long> {
     Page<Customer> findAllByNameContaining( String name,Pageable pageable);
     Page<Customer> findAllByName(String name,Pageable pageable);
+    Page<Customer> findAllByNameContainingOrAgeContainingOrProvinceContaining(String name, int age, String province, Pageable pageable);
 
 }

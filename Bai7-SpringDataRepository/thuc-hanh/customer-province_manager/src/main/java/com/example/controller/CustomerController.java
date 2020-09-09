@@ -5,9 +5,12 @@ import com.example.service.CustomerService;
 
 import com.example.service.ProvinceService;
 import com.fasterxml.jackson.annotation.JsonGetter;
+import net.bytebuddy.implementation.bind.annotation.Default;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,29 +28,58 @@ public class CustomerController {
     private CustomerService customerService;
     @Autowired
     private ProvinceService provinceService;
-    @GetMapping("/customers")
-    public ModelAndView getAllList(@PageableDefault(2) Pageable pageable, @RequestParam (value = "search",defaultValue = "") String search){
-        Page <Customer> customerList = customerService.getAllCustomer(search,pageable);
+
+
+    @GetMapping("/search")
+    public ModelAndView searchCustomer(@PageableDefault(2) @RequestParam (value = "search", defaultValue = "") String search, Pageable pageable){
+        Page<Customer> customerList = customerService.getAllCustomerByName(search,pageable);
+        ModelAndView modelAndView = new ModelAndView("customer/list","customers", customerList);
         if(customerList.isEmpty()){
-            return new ModelAndView("customer/list", "message", "Not found customer in DB");
+            modelAndView.addObject("message","Not found customer in DB");
+            return modelAndView;
         }else {
-            ModelAndView modelAndView = new ModelAndView("customer/list","customers", customerList);
-            modelAndView.addObject("search",search);
+            modelAndView.addObject("search",search);//tìm kiếm tuyệt đối
             return modelAndView;
         }
     }
 
-    @GetMapping("/search")
-    public ModelAndView searchCustomer(@RequestParam (value = "search", defaultValue = "") String search, Pageable pageable){
-        Page<Customer> customerList = customerService.getAllCustomerByName(search,pageable);
+    @GetMapping("/customers")
+    public ModelAndView getAllList(@PageableDefault(2) Pageable pageable, @RequestParam (value = "search",defaultValue = "") String search){
+        Page <Customer> customerList = customerService.getAllCustomer(search,pageable);
+        ModelAndView modelAndView = new ModelAndView("customer/list");
+
         if(customerList.isEmpty()){
-            return new ModelAndView("customer/list", "message", "Not found customer in DB");
+//            modelAndView.addObject("customers",customerList);
+            modelAndView.addObject("message","Not found customer in DB");
+            return modelAndView;
         }else {
-            ModelAndView modelAndView = new ModelAndView("customer/list","customers", customerList);
-            modelAndView.addObject("search",search);
+            modelAndView.addObject("customers",customerList);
+            modelAndView.addObject("search",search);// tìm kiếm tuowng đối
+            return modelAndView;
+        }
+
+
+    }
+
+
+    @GetMapping("/searchCustomerAllField")
+    public ModelAndView searchCustomerAllField(@RequestParam(value = "name", defaultValue = "") String name,
+                                               @RequestParam(value = "age", defaultValue = "") String age,
+                                               @RequestParam(value = "province", defaultValue = "") String province,
+                                               Pageable pageable){
+        Page<Customer> customerList = customerService.findAllByNameContainingOrAgeContainingOrProvinceContaining(name, Integer.parseInt(age), province, pageable);
+        if(customerList.isEmpty()){
+            return new ModelAndView("customer/list", "message", "Can't find customer in List");
+        }else {
+            ModelAndView modelAndView = new ModelAndView("customer/list", "customers",customerList);
+
+            modelAndView.addObject("name", name);
+            modelAndView.addObject("age", age);
+            modelAndView.addObject("province", province);
             return modelAndView;
         }
     }
+
 
     @GetMapping("/create-customer")
     public ModelAndView viewCreateCustomer(){

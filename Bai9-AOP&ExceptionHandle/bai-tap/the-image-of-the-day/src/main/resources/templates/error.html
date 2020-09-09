@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Erros</title>
+</head>
+<body>
+<p>Lỗi cmt co tu cam: </p>
+<th:block>
+    <tr th:object="${comment}">
+        <td th:text="${comment.getContent}"></td>
+    </tr>
+</th:block>
+<br>
+<a href="/home">Back</a>
+</body>
+</html>

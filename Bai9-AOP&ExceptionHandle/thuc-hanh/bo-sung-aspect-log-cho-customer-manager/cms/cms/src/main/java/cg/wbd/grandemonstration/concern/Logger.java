@@ -2,9 +2,10 @@ package cg.wbd.grandemonstration.concern;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
 
 import java.util.Arrays;
-
+@Aspect
 public class Logger {
     public void error(){
         System.out.println("[CMS] ERROR!");

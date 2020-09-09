@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+    <title>List of Blogs</title>
+    <script type="text/javascript">
+        // $(document).ready(function() {
+        //     $('#SearchForm').submit(function(event) {
+        //         let search = {};
+        //         search["search"] = $('#search').val();
+        //         $.ajax({
+        //             headers: {
+        //                 'Accept': 'application/json',
+        //                 'Content-Type': 'application/json'
+        //             },
+        //             type : "POST",
+        //             // data: {search: search["search"]},
+        //             // dataType: 'json',
+        //             data: JSON.stringify(search),
+        //             url: "/",
+        //             type: 'GET',
+        //             success: function(blogs) {
+        //                 let respContent = "";
+        //                 respContent = "<span class='success'> Blogs Search: "
+        //                 for(let item of blogs){
+        //                     respContent += "[";
+        //                     respContent += item.name + " : ";
+        //                     respContent += item.category.name + " : ";
+        //                     respContent += item.content + "]</span>";
+        //                     respContent += "<br>";
+        //                 }
+        //
+        //                 $("#result").html(respContent);
+        //             }
+        //         });
+        //         event.preventDefault();
+        //     });
+        // });
+        $(document).ready(function () {
+            $('#SearchForm').submit(function (event) {
+                let search = {};
+                search["search"] = $('#search').val();
+                console.log(search);
+                $.ajax({
+                    url: "/",
+                    type: "GET",
+                    data: {search1: search["search"]},
+                    dataType: 'json',
+                    // data: JSON.stringify(search),
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("Accept", "application/json");
+                        xhr.setRequestHeader("Content-Type", "application/json");
+                    },
+                    success: function (blogs) {
+                        let respContent = "";
+                        respContent += "<span class='success'> Blogs search : ";
+                        // console.log(blogs);
+                        for(let item of blogs){
+                            respContent += "[";
+                            respContent += item.name + " : " ;
+                            respContent += item.content + " : " ;
+                            respContent += item.category.name +  "]" + "</span>"
+                            respContent += "</br>";
+                        }
+                        $("#result").html(respContent);
+                    }
+                });
+                event.preventDefault();
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+<a href="/create-blog">Create new Blog</a>
+<!--<form id="SearchForm" myAttribute="${param.search}">-->
+<form id="SearchForm">
+    Search by first name:
+    <input  type="text" id="search"/>
+    <input type="submit" value="Search" />
+</form><br/>
+<div id="result"></div>
+<!--<form>-->
+<!--    <select name="searchCategogy" onchange='this.form.submit()'>-->
+<!--        <option th:each="c : ${categorys}" th:value="${c.name}" th:text="${c.name}"  ></option>-->
+<!--    </select>-->
+<!--</form><br/>-->
+<h1>Blog</h1>
+<table border="1" id="table_blog">
+    <tr>
+        <th>Blog Name</th>
+        <th>Type</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="blog : ${blogs}">
+        <tr>
+            <td ><a th:href="@{/view-blog/__${blog.id}__ }" th:text="${blog.name}"></a></td>
+            <td th:text="${blog.category.name}"></td>
+            <td><a th:href="@{/edit-blog/__${blog.id}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-blog/__${blog.id}__ }" class="delete" title="Delete" id="delete"
+                   data-toggle="tooltip" data-confirm="Are you sure to delete this item?">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+<button type="button" id="btn-more"
+        class="btn btn-primary btn-lg">More
+</button>
+<div>
+    <a th:href="@{'/blogs'(page=${blogs.number - 1})}" th:if="${blogs.hasPrevious()}">Previous</a>
+    <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>
+    <a th:href="@{'/blogs'(page=${blogs.number + 1})}" th:if="${blogs.hasNext()}">Next</a>
+</div>
+
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+<!--<script>-->
+<!--    (function () {-->
+<!--        'use strict';-->
+<!--        window.addEventListener('load', function () {-->
+<!--            var deleteLinks = document.querySelectorAll('.delete');-->
+<!--            for (var i = 0; i < deleteLinks.length; i++) {-->
+<!--                deleteLinks[i].addEventListener('click', function(event) {-->
+<!--                    event.preventDefault();-->
+<!--                    var choice = confirm(this.getAttribute('data-confirm'));-->
+<!--                    if (choice) {-->
+<!--                        window.location.href = this.getAttribute('href');-->
+<!--                    }-->
+<!--                });-->
+<!--            }-->
+<!--        }, false);-->
+<!--    })();-->
+<!--</script>-->
+</html>

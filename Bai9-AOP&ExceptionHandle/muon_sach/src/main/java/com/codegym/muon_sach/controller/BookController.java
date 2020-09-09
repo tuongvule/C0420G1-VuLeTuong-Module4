@@ -26,6 +26,7 @@ public class BookController {
 
     @GetMapping("/books")
     public ModelAndView viewAllBook() {
+
         return new ModelAndView("list","books",bookService.getAllBooks());
     }
 
@@ -81,5 +82,4 @@ public class BookController {
     public ModelAndView showErrorGiveBookBack() {
         return new ModelAndView("errorGiveBookBack");
     }
-
 }

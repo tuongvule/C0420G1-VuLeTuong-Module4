@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+</head>
+<body>
+<iframe id="img-of-the-day" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+<form action="/home/comment" th:object="${comment}" method="post">
+    <select name="" th:field="*{mark}" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select><br>
+    <table>
+        <tr>
+            <td>Author:</td>
+        </tr>
+        <tr>
+            <td><input type="text" th:field="*{name}"></td>
+        </tr>
+        <tr>
+            <td>Content</td>
+        </tr>
+        <tr>
+            <td><textarea th:field="*{content}"  cols="30" rows="10"></textarea></td>
+        </tr>
+    </table>
+    <div>
+        <input type="submit" value="Comment">
+    </div>
+</form>
+
+
+Comments:
+<table>
+    <tr>
+        <th>Mark</th>
+        <th>Content</th>
+        <th>totalLike</th>
+    </tr>
+    <tr>
+        <th:block th:if="${message}">
+            <p th:text="${message}"></p>
+        </th:block>
+    </tr>
+    <tr th:each="comment: ${commentList}">
+        <form th:action="@{/home/like/{id} (id=${comment.id})}" method="post">
+            <td th:text="${comment.mark}"></td>
+            <td th:text="${comment.content}"></td>
+            <td th:text="${comment.totalLike}"></td>
+            <td><input type="submit" value="Like"></td>
+        </form>
+    </tr>
+</table>
+
+<div>
+    <a th:href="@{'/home'(page=${commentList.number -1}, search=${search})}" th:if="${commentList.hasPrevious()}">Previous</a>
+    <span th:text="${commentList.number + 1}"></span>/<span th:text="${commentList.totalPages}"></span>
+    <a th:href="@{'/home'(page=${commentList.number +1}, search=${search})}" th:if="${commentList.hasNext()}">Next</a>
+</div>
+
+
+<script>
+    let query = 'https://api.nasa.gov/planetary/apod?api_key=JLEKsg7H6en8KJQU2DeOo61hE8rQ68ybrzUSBONU';
+    let request = new XMLHttpRequest();
+    request.open('GET', query);
+    request.onload = function () {
+        if (request.status === 200) {
+            let response = JSON.parse(request.responseText);
+            document.getElementById('img-of-the-day').setAttribute('src', response.url);
+        }
+    };
+    request.send();
+</script>
+</body>
+</html>
