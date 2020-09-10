@@ -30,6 +30,6 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Page<Customer> findAllByNameContainingOrAgeContainingOrProvinceContaining(String name,int age, String province, Pageable pageable) {
-        return customerRepository.findAllByNameContainingOrAgeContainingOrProvinceContaining(name,age, province, pageable);
+        return customerRepository.findAllByNameContainingAndAgeAndProvince_NameContaining(name,age, province, pageable);
     }
 }

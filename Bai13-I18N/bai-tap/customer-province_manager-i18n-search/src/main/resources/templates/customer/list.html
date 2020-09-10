@@ -28,9 +28,10 @@
         <button type="submit" th:text="#{list.searchByNameContain_label}"></button>
     </form>
     <form th:action="@{/searchCustomerAllField}" method="get">
-        <input style="height: fit-content; width: auto" type="text" name="name" placeholder="seach by all name" th:value="${name}">
-        <input style="height: fit-content; width: auto" type="text" name="age" placeholder="seach by all age" th:value="${age}">
-        <input style="height: fit-content; width: auto" type="text" name="province" placeholder="seach by province" th:value="${province}">
+        <input style="height: fit-content; width: auto" type="text" name="name" placeholder="search by name" th:value="${name}">
+        <input style="height: fit-content; width: auto" type="text" name="age" placeholder="search by age" th:value="${age}" >
+<!--        <input style="height: fit-content; width: auto" type="datetime-local" name="age" placeholder="search by age" th:value="${age}" >-->
+        <input style="height: fit-content; width: auto" type="text" name="province" placeholder="search by province" th:value="${province}">
         <button type="submit" th:text="#{list.searchByNameField_label}"></button>
     </form>
 </div>
@@ -57,7 +58,7 @@ Language: <a href="?lang=en">English</a> | <a href="?lang=ja">Japanese</a>
     </tr>
     </tbody>
 </table>
-<div >
+<div th:if="${customers}">
     <ul style="display: flex; list-style: none">
         <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
         <a th:href="@{'/customers'(page=${customers.number - 1},search=${search})}" th:if="${customers.hasPrevious()}"><button th:text="#{list.previousLabel}"></button></a>
