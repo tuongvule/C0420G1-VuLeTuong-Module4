@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>Add New Customer</title>
+</head>
+<body style="background-image: url('https://www.travelvietnam.com/images/photos/asia/vietnam-danang-furama-resort-danang-3.jpg?t=1594914357')">
+<div class="header" th:replace="layout::header"></div>
+<div class="menu" th:replace="layout::menu"></div>
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <form  th:action="@{/service/create}" th:object="${service}" method="post" novalidate>
+            <div class="modal-header">
+                <h4 class="modal-title">Add New Service</h4>
+                <a th:href="@{/service}"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></a>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Service Code</label>
+                    <input type="text" class="form-control"th:field="*{serviceCode}" required>
+                    <p th:if="${#fields.hasErrors('serviceCode')}" th:errors="*{serviceCode}" style="color: red"></p>
+<!--                    thẻ này để hiển thị lỗi, nếu bị chặn lại ở controller-->
+                </div>
+
+                <div class="form-group">
+                    <label>Name Service</label>
+                    <input type="text" class="form-control"  th:field="*{nameService}" required>
+                    <p th:if="${#fields.hasErrors('nameService')}" th:errors="*{nameService}" style="color: red"></p>
+                </div>
+                <div class="form-group">
+                    <label>Area</label>
+                    <input type="text" class="form-control"  th:field="*{area}" required>
+                    <p th:if="${#fields.hasErrors('area')}" th:errors="*{area}" style="color: red"></p>
+
+                </div>
+                <div class="form-group">
+                    <label>Floor</label>
+                    <input type="text" class="form-control"  th:field="*{floor}" required>
+                    <p th:if="${#fields.hasErrors('floor')}" th:errors="*{floor}" style="color: red"></p>
+                </div>
+                <div class="form-group">
+                    <label>Number of People</label>
+                    <input type="text" class="form-control"  th:field="*{numberOfPeople}" required>
+                    <p th:if="${#fields.hasErrors('numberOfPeople')}" th:errors="*{numberOfPeople}" style="color: red"></p>
+                </div>
+                <div class="form-group">
+                    <label>Cost</label>
+                    <input type="text" class="form-control"  th:field="*{cost}" required>
+                    <p th:if="${#fields.hasErrors('cost')}" th:errors="*{cost}" style="color: red"></p>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select name="status" id="">
+                        <option value="available">Available</option>
+                        <option value="not available">Not Available</option>
+                    </select>
+<!--                    <input type="text" class="form-control"  th:field="*{status}" required>-->
+                </div>
+
+                <div class="form-group">
+                    <label>CustomerType</label>
+                    <select name="rentType">
+                        <option th:each="r: ${rentTypeList}"
+                                th:value="${r.id}"
+                                th:text="${r.nameRentType}"></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>ServiceType</label>
+                    <select name="serviceType">
+                        <option th:each="s: ${serviceTypeList}"
+                                th:value="${s.id}"
+                                th:text="${s.nameServiceType}"></option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <a th:href="@{/service}"><input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"></a>
+                <input type="submit" class="btn btn-success" value="Create">
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>Add New Customer</title>
+</head>
+<body style="background-image: url('https://www.travelvietnam.com/images/photos/asia/vietnam-danang-furama-resort-danang-3.jpg?t=1594914357')">
+<div class="header" th:replace="layout::header"></div>
+<div class="menu" th:replace="layout::menu"></div>
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <form  th:action="@{/contractDetail/create}" th:object="${contractDetail}" method="post" novalidate>
+            <div class="notify">
+                <th:block th:if="${message}">
+                    <span th:text="${message}" style="color: red"></span>
+                </th:block>
+            </div>
+            <div class="modal-header">
+                <h4 class="modal-title">Add New Detail Contract</h4>
+                <a th:href="@{/contract}"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></a>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Quantity</label>
+                    <input type="text" class="form-control"th:field="*{quantity}" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Name AttachService</label>
+                    <select name="attachService">
+                        <option th:each="att: ${attachServiceList}"
+                                th:value="${att.id}"
+                                th:text="${att.nameAttachService}"></option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Id Contract</label>
+                    <select name="contract">
+                        <option th:each="con: ${contract}"
+                                th:value="${con.id}"
+                                th:text="${con.id}"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a th:href="@{/contract}"><input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"></a>
+                <input type="submit" class="btn btn-success" value="Create">
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

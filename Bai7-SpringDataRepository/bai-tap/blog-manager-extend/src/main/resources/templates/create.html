@@ -7,31 +7,44 @@
         <title>Title</title>
     </head>
 <body>
-<div class="modal-dialog">
-    <div class="modal-content">
-        <form  th:action="@{/blog/save}" th:object="${blog}" method="post" novalidate>
-            <div class="modal-header">
-                <h4 class="modal-title">Add New Blog</h4>
-                <a th:href="@{/}"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></a>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label>Title</label>
-                    <input type="text" class="form-control"th:field="*{title}" required>
+
+<!--<div id="editNoteModal" class="modal fade" >-->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="note/update" method="post">
+
+                <div class="modal-header" style="background: dimgray">
+                    <h4 class="modal-title" style="color: #e9e9e9">Edit Note</h4>
+                    <a href="/"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></a>
                 </div>
 
-                <div class="form-group">
-                    <label>Content</label>
-                    <input type="text" class="form-control"  th:field="*{content}" required>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="hidden" name="id" id="id"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" name="title" id="title" >
+                    </div>
+                    <div class="form-group">
+                        <label>Content</label>
+                        <input type="text" class="form-control" name="content" id="content">
+                    </div>
+                    <div class="form-group">
+                        <label>Note Type :</label>
+                        <select name="noteType" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <option th:each="nt :${noteTypes}" th:value="${nt.id}" th:text="${nt.name}"></option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <a th:href="@{/}"><input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"></a>
-                <input type="submit" class="btn btn-success" value="Create">
-            </div>
-        </form>
+                <div class="modal-footer">
+                    <a href=""><input type="button" class="btn btn-default"  value="Cancel"></a>
+                    <input type="submit" class="btn btn-info" value="Save">
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-<footer th:replace="layout::footer" footer></footer>
+<!--</div>-->
+
 </body>
 </html>

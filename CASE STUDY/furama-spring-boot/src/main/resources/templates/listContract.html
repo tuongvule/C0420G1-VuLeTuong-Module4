@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>List of Customers</title>
+</head>
+<body style="background-image: url('https://www.travelvietnam.com/images/photos/asia/vietnam-danang-furama-resort-danang-3.jpg?t=1594914357')">
+<div class="header" th:replace="layout::header"></div>
+<div class="menu" th:replace="layout::menu"></div>
+<div>
+    <div class="content" style="height: 71vh">
+        <div class="container-fluid">
+            <div class="row" >
+                <div class="col-2" style="display: flex;flex-direction: column;margin-top: 104px" >
+                    <a class="btn btn-secondary btn-lg" href="/customer/create" style="background-color: #996b27; margin: 2px;">Add New Customer</a>
+                    <a class="btn btn-secondary btn-lg" href="/service/create"  style="background-color: #996b27; margin: 2px;">Add New Service</a>
+                    <a class="btn btn-secondary btn-lg" href="/customer"  style="background-color: #996b27; margin: 2px;">Add New Contract</a>
+                    <a class="btn btn-secondary btn-lg" href="/contract"  style="background-color: #996b27; margin: 2px;">Add Detail Contract</a>
+                </div>
+                <div class="col-10" style="margin-top: 28px">
+                    <h2 style="color: black ;text-align: left">List of Contracts </h2>
+                    <form action="/customer">
+                        <div class="search-box">
+                            <input class="search-txt" type="text" name="search" placeholder="Type to search" th:value="${search}">
+                            <button class="search-btn" ><i class="fa fa-search" aria-hidden="true"></i></button>
+                            <!--                            <a th:href="@{/customer}" class="search-btn" ><i class="fa fa-search" aria-hidden="true"></i></a>-->
+                        </div>
+                    </form>
+
+                    <div class="notify">
+                        <th:block th:if="${message}">
+                            <span th:text="${message}" style="color: red"></span>
+                        </th:block>
+                    </div>
+                    <table class="table table-striped">
+                        <thead class="masthead-brand" style="background-color: sienna">
+                        <tr>
+                            <th scope="col" style="width: 3%" >ID</th>
+                            <th scope="col" style="width: auto" >Deposit</th>
+                            <th scope="col" style="width: auto">End Date</th>
+                            <th scope="col" style="width: auto">Start Date</th>
+                            <th scope="col" style="width: auto" >Total Money</th>
+                            <th scope="col" style="width: auto">Name Customer</th>
+                            <th scope="col" style="width: auto">Name Service</th>
+                            <th scope="col" style="width: auto">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody style="background-color: #f7f5f2">
+                        <tr th:each="contract,rowStat : ${contracts}">
+                            <td th:text="${contract.id}"></td>
+                            <td th:text="${contract.deposit}"></td>
+                            <td th:text="${contract.endDate}"></td>
+                            <td th:text="${contract.startDate}"></td>
+                            <td th:text="${contract.totalMoney}"></td>
+                            <td th:text="${contract.customer.name}"></td>
+                            <td th:text="${contract.service.nameService}"></td>
+                            <td>
+                                <a th:href="@{/contract/{id}/view(id=${contract.id})}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                <a th:href="@{/contract/{id}/edit(id=${contract.id})}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                <a th:href="@{/contract/{id}/delete(id=${contract.id})}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                <a th:href="@{/contractDetail/{id}/create(id=${contract.id})}"  title="Add New Detail Contract" data-toggle="tooltip"><i class="material-icons" style="color: blue">&#xe148;</i></a>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div >
+                        <ul style="display: flex; list-style: none">
+                            <span th:text="${contracts.number + 1}"></span>/<span th:text="${contracts.totalPages}"></span>
+                            <a th:href="@{'/contract'(page=${contracts.number - 1},search=${search})}" th:if="${contracts.hasPrevious()}"><button>Previous</button></a>
+                            <li th:each="i: ${#numbers.sequence(1, contracts.getTotalPages())}" >
+                                <a th:href="@{'/contract'(page=${i},search=${search})}"><button>[[${i}]]</button></a>
+                            </li>
+                            <a th:href="@{'/contract'(page=${contracts.number + 1} ,search=${search})}" th:if="${contracts.hasNext()}"><button>Next</button></a>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--end content-->
+<div class="header" th:replace="layout::footer"></div>
+</body>
+</html>

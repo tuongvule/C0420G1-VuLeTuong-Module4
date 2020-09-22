@@ -1,41 +1,64 @@
 package tuongvule.com.furamaspringboot.model;
 
 
+import org.hibernate.validator.constraints.Length;
+import org.springframework.format.annotation.DateTimeFormat;
+import tuongvule.com.furamaspringboot.validation.PhoneNumber;
+
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 import java.util.List;
+
 
 @Entity
 @Table(name = "customers")
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
+
+    @Column(name = "customer_code", columnDefinition = "VARCHAR",length = 50)
+
+    @Pattern(regexp = "(KH)-[0-9]{4}", message = "Not match with pattern <KH-XXXX> (with X: number between 0-9.")
+    private String customerCode;
 
     private String name;
 
+    @DateTimeFormat(pattern = "yyyy/MM/dd")
     private String birthday;
 
+    @Pattern(regexp = "[0-9]{9}||[0-9]{12}",message = "IdCard must have 9 or 12 number.")
     private String idCard;
 
+    @PhoneNumber
     private String phoneNumber;
 
+    @Pattern(regexp = "^[a-zA-Z0-9]+(@)[a-zA-Z0-9]+(.)[a-zA-Z0-9]+$", message = "Email must be follow pattern: abc@abc.com")
     private String email;
 
     private String address;
 
     @ManyToOne
     @JoinColumn(name="id_customer_type")
-    private CutomerType cutomerType;
+    private CustomerType customerType;
 
     @OneToMany
     List<Contract> contracts;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCustomerCode() {
+        return customerCode;
+    }
+
+    public void setCustomerCode(String customerCode) {
+        this.customerCode = customerCode;
     }
 
     public String getName() {
@@ -86,12 +109,12 @@ public class Customer {
         this.address = address;
     }
 
-    public CutomerType getCutomerType() {
-        return cutomerType;
+    public CustomerType getCustomerType() {
+        return customerType;
     }
 
-    public void setCutomerType(CutomerType cutomerType) {
-        this.cutomerType = cutomerType;
+    public void setCustomerType(CustomerType customerType) {
+        this.customerType = customerType;
     }
 
     public List<Contract> getContracts() {

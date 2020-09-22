@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>Add New Note</title>
+</head>
+<body>
+<!--<div id="addNoteModal" class="modal fade">-->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form th:action="@{/note/save}" method="post" th:object="${note}">
+                <div class="modal-header" style="background: dimgrey">
+                    <h4 class="modal-title" style="color: #e9e9e9">Add Note</h4>
+                    <a href="/"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></a>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" th:field="*{title}">
+                    </div>
+                    <div class="form-group">
+                        <label>Content</label>
+                        <textarea class="form-control" th:field="*{content}"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Note Type :</label>
+<!--                        <select name="province">-->
+<!--                            <option th:each="p: ${provinces}"-->
+<!--                                    th:value="${p.id}"-->
+<!--                                    th:text="${p.name}"></option>-->
+<!--                        </select>-->
+                        <select name="noteType" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <option th:each="nt :${noteTypes}" th:value="${nt.id}" th:text="${nt.name}"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/"><input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"></a>
+                    <input type="submit" class="btn btn-success" value="Add">
+                </div>
+            </form>
+        </div>
+    </div>
+<!--</div>-->
+</body>
+</html>

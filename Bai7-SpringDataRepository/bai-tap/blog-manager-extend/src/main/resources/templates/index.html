@@ -68,7 +68,7 @@
                         <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>
                             <a th:href="@{'/'(page=${blogs.number - 1},search=${search})}" th:if="${blogs.hasPrevious()}"><button>Previous</button></a>
                         <li th:each="i: ${#numbers.sequence(1, blogs.getTotalPages())}" >
-                            <a th:href="@{'/'(page=${i - 1},search=${search})}"><button>[[${i}]]</button></a>
+                            <a th:href="@{'/'(page=${i},search=${search})}"><button>[[${i}]]</button></a>
                         </li>
                         <a th:href="@{'/'(page=${blogs.number + 1} ,search=${search})}" th:if="${blogs.hasNext()}"><button>Next</button></a>
                     </ul>

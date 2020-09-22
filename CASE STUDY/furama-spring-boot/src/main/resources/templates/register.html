@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body style="background-image: url('https://www.travelvietnam.com/images/photos/asia/vietnam-danang-furama-resort-danang-3.jpg?t=1594914357')">
+<div class="header" th:replace="layout::header"></div>
+<div class="menu" th:replace="layout::menu"></div>
+<div class="container1 modal" id="login" th:replace="home::register">
+<!--<div class="container1 modal" id="login">-->
+    <div class="login-form">
+        <form class="box" th:action="@{/register}" method="post">
+            <button type="button" class="close" data-dismiss="modal" style="float: right;color: black" aria-hidden="true">&times;</button>
+            <h1>Register Form</h1>
+            <input type="text" placeholder="Username" name="username">
+            <input type="password" placeholder="Password" name="password">
+            <input type="submit" value="Register">
+        </form>
+    </div>
+<!--</div>-->
+</div>
+
+</body>
+</html>

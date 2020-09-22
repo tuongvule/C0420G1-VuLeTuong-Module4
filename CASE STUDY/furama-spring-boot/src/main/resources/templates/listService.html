@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>List of Customers</title>
+</head>
+<body style="background-image: url('https://www.travelvietnam.com/images/photos/asia/vietnam-danang-furama-resort-danang-3.jpg?t=1594914357')">
+<div class="header" th:replace="layout::header"></div>
+<div class="menu" th:replace="layout::menu"></div>
+<div>
+    <div class="content" style="height: 71vh">
+        <div class="container-fluid">
+            <div class="row" >
+                <div class="col-2" style="display: flex;flex-direction: column;margin-top: 104px" >
+                    <a class="btn btn-secondary btn-lg" href="/customer/create" style="background-color: #996b27; margin: 2px;">Add New Customer</a>
+                    <a class="btn btn-secondary btn-lg" href="/service/create"  style="background-color: #996b27; margin: 2px;">Add New Service</a>
+                    <a class="btn btn-secondary btn-lg" href="/contract/create"  style="background-color: #996b27; margin: 2px;">Add New Contract</a>
+                    <a class="btn btn-secondary btn-lg" href="/detailContract/create"  style="background-color: #996b27; margin: 2px;">Add Detail Contract</a>
+                </div>
+                <div class="col-10" style="margin-top: 28px">
+                    <h2 style="color: black ;text-align: left">List of Services </h2>
+                    <form action="/service">
+                        <div class="search-box">
+                            <input class="search-txt" type="text" name="search" placeholder="Type to search" th:value="${search}">
+                            <button class="search-btn" ><i class="fa fa-search" aria-hidden="true"></i></button>
+<!--                            <a th:href="@{/customer}" class="search-btn" ><i class="fa fa-search" aria-hidden="true"></i></a>-->
+                        </div>
+                    </form>
+
+                    <div class="notify">
+                        <div th:if="${message}">
+                            <span th:text="${message}"></span>
+                        </div>
+                    </div>
+                    <table class="table table-striped">
+                        <thead class="masthead-brand" style="background-color: sienna">
+                        <tr>
+                            <th scope="col" style="width: 3%" >ID</th>
+                            <th scope="col" style="width: auto" >Service Code</th>
+                            <th scope="col" style="width: auto">Name Service</th>
+                            <th scope="col" style="width: auto">Area</th>
+                            <th scope="col" style="width: auto" >Floor</th>
+                            <th scope="col" style="width: auto">Number of People</th>
+                            <th scope="col" style="width: auto">Cost</th>
+                            <th scope="col" style="width: auto">Status</th>
+                            <th scope="col" style="width: auto">RentType</th>>
+                            <th scope="col" style="width: auto">ServiceType</th>
+                            <th scope="col" style="width: auto">Actions</th>
+                        </tr>
+
+                        </thead>
+                        <tbody style="background-color: #f7f5f2">
+                        <tr th:each="service,rowStat : ${services}">
+                            <td th:text="${service.id}"></td>
+                            <td th:text="${service.serviceCode}"></td>
+                            <td th:text="${service.nameService}"></td>
+                            <td th:text="${service.area}"></td>
+                            <td th:text="${service.floor}"></td>
+                            <td th:text="${service.numberOfPeople}"></td>
+                            <td th:text="${service.cost}"></td>
+                            <td th:text="${service.status}"></td>
+                            <td th:text="${service.rentType.nameRentType}"></td>
+                            <td th:text="${service.serviceType.nameServiceType}"></td>
+                            <td>
+                                <a th:href="@{/service/{id}/view(id=${service.id})}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                <a th:href="@{/service/{id}/edit(id=${service.id})}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                <a th:href="@{/service/{id}/delete(id=${service.id})}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div >
+                        <ul style="display: flex; list-style: none">
+                            <span th:text="${services.number + 1}"></span>/<span th:text="${services.totalPages}"></span>
+                            <a th:href="@{'/service'(page=${services.number - 1},search=${search})}" th:if="${services.hasPrevious()}"><button>Previous</button></a>
+                            <li th:each="i: ${#numbers.sequence(1, services.getTotalPages())}" >
+                                <a th:href="@{'/service'(page=${i},search=${search})}"><button>[[${i}]]</button></a>
+                            </li>
+                            <a th:href="@{'/service'(page=${services.number + 1} ,search=${search})}" th:if="${services.hasNext()}"><button>Next</button></a>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--end content-->
+<div class="header" th:replace="layout::footer"></div>
+</body>
+</html>

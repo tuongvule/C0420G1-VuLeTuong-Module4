@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>List of Notes</title>
+</head>
+<body>
+
+<div class="container-lg">
+    <div class="table-responsive">
+        <div class="table-wrapper" style="background-color:#f7f5f2 ">
+            <!-- Title 1-->
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6" style="max-width: 21%">
+                        <h2>Note  <b>Management</b></h2>
+                    </div>
+
+                    <div class="col-sm-3" style="max-width: 21%">
+                        <a th:href="@{/note/create}" class="btn btn-success" data-toggle="modal-dialog"><i class="fa fa-plus"></i> <span>Add New Note</span></a>
+                    </div>
+
+                    <div class="col-sm-3"style="max-width: 25%;margin-right: 90px">
+                        <div class="search-box">
+                            <form action="/" >
+                                <div class="input-group">
+                                    <div class="search-box">
+                                        <input class="search-txt" type="text" name="search" placeholder="Type to search" th:value="${search}">
+                                        <button class="search-btn" style="height: 37px" >Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3" style="max-width: 21%">
+                        <div class="search-box">
+                            <form action="/" >
+                                <div class="input-group">
+                                    <div class="search-box">
+                                        <input class="search-txt" type="text" name="search" placeholder="Type to search" th:value="${search}">
+                                        <button class="search-btn" style="height: 37px" >Search2</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Title 2-->
+
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6" style="max-width: 21%">
+                        <h2>Note  <b>Management</b></h2>
+                    </div>
+
+                    <div class="col-sm-3" style="max-width: 21%">
+                        <a th:href="@{/note/create}" class="btn btn-success" data-toggle="modal-dialog"><i class="fa fa-plus"></i> <span>Add New Note</span></a>
+                    </div>
+
+                    <div class="col-sm-3"style="max-width: 25%;margin-right: 90px">
+                        <div class="search-box">
+                            <form action="/" >
+                                <div class="input-group">
+                                    <div class="search-box">
+                                        <input class="search-txt" type="text" name="search" placeholder="Type to search" th:value="${search}">
+                                        <button class="search-btn" style="height: 37px" >Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3" style="max-width: 21%">
+                        <div class="search-box">
+                            <form action="/" >
+                                <div class="input-group">
+                                    <div class="search-box">
+                                        <input class="search-txt" type="text" name="search" placeholder="Type to search" th:value="${search}">
+                                        <button class="search-btn" style="height: 37px" >Search2</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="notify" style="color: red">
+                <div th:if="${message}">
+                    <span th:text="${message}"></span>
+                </div>
+            </div>
+
+            <table class="table table-striped" >
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Note Type</th>
+                    <th>Content</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="note: ${notes}">
+                    <td th:text="${note.id}"></td>
+                    <td th:text="${note.title}"></td>
+                    <td th:text="${note.noteType.name}"></td>
+                    <td th:text="${note.content}"></td>
+                    <td>
+                        <a th:href="@{/note/{id}/view(id=${note.id})}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                        <a th:href="@{/note/{id}/edit(id=${note.id})}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                        <a th:href="@{/note/{id}/delete(id=${note.id})}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div >
+                <ul style="display: flex; list-style: none">
+                    <span th:text="${notes.number + 1}"></span>/<span th:text="${notes.totalPages}"></span>
+                    <a th:href="@{'/'(page=${notes.number - 1},search=${search})}" th:if="${notes.hasPrevious()}"><button>Previous</button></a>
+                    <li th:each="i: ${#numbers.sequence(1, notes.getTotalPages())}" >
+                        <a th:href="@{'/'(page=${i}-1,search=${search})}"><button>[[${i}]]</button></a>
+                    </li>
+                    <a th:href="@{'/'(page=${notes.number + 1} ,search=${search})}" th:if="${notes.hasNext()}"><button>Next</button></a>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

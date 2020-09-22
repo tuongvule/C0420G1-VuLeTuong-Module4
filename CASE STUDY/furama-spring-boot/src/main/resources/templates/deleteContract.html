@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>Add New Customer</title>
+</head>
+<body style="background-image: url('https://www.travelvietnam.com/images/photos/asia/vietnam-danang-furama-resort-danang-3.jpg?t=1594914357')">
+<div class="header" th:replace="layout::header"></div>
+<div class="menu" th:replace="layout::menu"></div>
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <form  th:action="@{/contract/delete}" th:object="${contract}" method="post" novalidate>
+            <div class="modal-header">
+                <h4 class="modal-title"> Delete Contract</h4>
+                <a th:href="@{/contract}"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></a>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Id</label>
+                    <input type="text" class="form-control"th:field="*{id}" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Deposit</label>
+                    <input type="text" class="form-control"th:field="*{deposit}" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Start Date</label>
+                    <input type="text" class="form-control"  th:field="*{startDate}" readonly>
+                </div>
+                <div class="form-group">
+                    <label>End Date</label>
+                    <input type="text" class="form-control"  th:field="*{endDate}" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Total Money</label>
+                    <input type="text" class="form-control"  th:field="*{totalMoney}" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Id Customer</label>
+                    <input type="text" class="form-control"  th:field="*{customer.id}" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Name Customer</label>
+                    <input type="text" class="form-control"  th:field="*{customer.name}" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Name Service</label>
+                    <input type="text" class="form-control"  th:field="*{service.nameService}" readonly>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this customer?</p>
+                <p class="text-warning"><small>This action cannot be undone.</small></p>
+            </div>
+            <div class="modal-footer">
+                <a th:href="@{/contract}"><input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"></a>
+                <input type="submit" class="btn btn-success" value="Delete">
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

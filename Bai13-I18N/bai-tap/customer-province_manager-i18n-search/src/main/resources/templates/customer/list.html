@@ -61,11 +61,11 @@ Language: <a href="?lang=en">English</a> | <a href="?lang=ja">Japanese</a>
 <div th:if="${customers}">
     <ul style="display: flex; list-style: none">
         <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
-        <a th:href="@{'/customers'(page=${customers.number - 1},search=${search})}" th:if="${customers.hasPrevious()}"><button th:text="#{list.previousLabel}"></button></a>
+        <a th:href="@{'/'(page=${customers.number - 1},search=${search})}" th:if="${customers.hasPrevious()}"><button th:text="#{list.previousLabel}"></button></a>
         <li th:each="i: ${#numbers.sequence(1, customers.getTotalPages())}" >
-            <a th:href="@{'/customers'(page=${i - 1},search=${search})}"><button>[[${i}]]</button></a>
+            <a th:href="@{'/'(page=${i - 1},search=${search})}"><button>[[${i}]]</button></a>
         </li>
-        <a th:href="@{'/customers'(page=${customers.number + 1} ,search=${search})}" th:if="${customers.hasNext()}"><button th:text="#{list.nextLabel}"></button></a>
+        <a th:href="@{'/'(page=${customers.number + 1} ,search=${search})}" th:if="${customers.hasNext()}"><button th:text="#{list.nextLabel}"></button></a>
     </ul>
 </div>
 <form  action="">

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>List of Customers</title>
+</head>
+<body style="background-image: url('https://www.travelvietnam.com/images/photos/asia/vietnam-danang-furama-resort-danang-3.jpg?t=1594914357')">
+<div class="header" th:replace="layout::header"></div>
+<div class="menu" th:replace="layout::menu"></div>
+<div>
+    <div class="content" style="height: 71vh">
+        <div class="container-fluid">
+            <div class="row" >
+                <div class="col-2" style="display: flex;flex-direction: column;margin-top: 104px" >
+                    <a class="btn btn-secondary btn-lg" href="/customer/create" style="background-color: #996b27; margin: 2px;">Add New Customer</a>
+                    <a class="btn btn-secondary btn-lg" href="/service/create"  style="background-color: #996b27; margin: 2px;">Add New Service</a>
+                    <a class="btn btn-secondary btn-lg" href="/contract/create"  style="background-color: #996b27; margin: 2px;">Add New Contract</a>
+                    <a class="btn btn-secondary btn-lg" href="/detailContract/create"  style="background-color: #996b27; margin: 2px;">Add Detail Contract</a>
+                </div>
+                <div class="col-10" style="margin-top: 28px">
+                    <h2 style="color: black ;text-align: left">All Customers Use Services at Furama and Total Money</h2>
+                    <form action="/customer" >
+                        <div class="search-box">
+                            <input class="search-txt" type="text" name="search" placeholder="Type to search" th:value="${search}">
+                            <button class="search-btn" ><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                    </form>
+
+                    <div class="notify">
+                        <th:block th:if="${message}">
+                            <span th:text="${message}" style="color: red"></span>
+                        </th:block>
+                    </div>
+                    <table class="table table-striped">
+                        <thead class="masthead-brand" style="background-color: sienna">
+                        <tr>
+                            <th scope="col" style="width: 3%" >ID Customer</th>
+<!--                            <th scope="col" style="width: auto" >Customer Name</th>-->
+<!--                            <th scope="col" style="width: 6%">Service Name</th>-->
+<!--                            <th scope="col" style="width: auto">Cost of Service</th>-->
+<!--                            <th scope="col" style="width: auto" >Attach Service Name</th>-->
+<!--                            <th scope="col" style="width: auto">Cost of AttachService</th>-->
+<!--                            <th scope="col" style="width: auto">Quantity of AttachService</th>-->
+                            <th scope="col" style="width: auto">Total of Money</th>
+                        </tr>
+                        </thead>
+                        <tbody style="background-color: #f7f5f2">
+                        <tr th:each="contract,rowStat : ${contracts}">
+                            <td th:text="${contract.customer.id}"></td>
+<!--                            <td th:text="${contract.customer.name}"></td>-->
+<!--                            <td th:text="${contract.service.nameService}"></td>-->
+<!--                            <td th:text="${contract.service.cost}"></td>-->
+<!--                            <td th:text="${contract.contractDetails.}"></td>-->
+<!--                            <td th:text="${contract.customer.idCard}"></td>-->
+<!--                            <td th:text="${contract.customer.phoneNumber}"></td>-->
+<!--                            <td th:text="${contract.customer.email}"></td>-->
+<!--                            <td th:text="${contract.customer.address}"></td>-->
+                            <td th:text="${contract.total}"></td>
+                            <td>
+                                <a th:href="@{/customer/{id}/view(id=${contract.customer.id})}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                <a th:href="@{/customer/{id}/edit(id=${contract.customer.id})}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                <a th:href="@{/customer/{id}/delete(id=${contract.customer.id})}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                <a th:href="@{/contract/{id}/create(id=${contract.customer.id})}"  title="Add New Contract" data-toggle="tooltip"><i class="material-icons" style="color: blue">&#xe148;</i></a>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div >
+                        <ul style="display: flex; list-style: none">
+                            <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
+                            <a th:href="@{'/customer'(page=${customers.number - 1},search=${search})}" th:if="${customers.hasPrevious()}"><button>Previous</button></a>
+                            <li th:each="i: ${#numbers.sequence(1, customers.getTotalPages())}" >
+                                <a th:href="@{'/customer'(page=${i},search=${search})}"><button>[[${i}]]</button></a>
+                            </li>
+                            <a th:href="@{'/customer'(page=${customers.number + 1} ,search=${search})}" th:if="${customers.hasNext()}"><button>Next</button></a>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--end content-->
+<div class="header" th:replace="layout::footer"></div>
+</body>
+</html>
